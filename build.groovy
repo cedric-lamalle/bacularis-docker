@@ -7,8 +7,8 @@ REGISTRY_URL = 'http://10.0.0.1:5000'
 NAME = 'bacularis'
 PACKAGES = ['standalone', 'web', 'api-dir', 'api-sd', 'api-fd']
 ALPINE_VERSION='3.18.3'
-DEBIAN_VERSION='trixie-slim'
-DEBIAN_CODENAME='trixie'
+DEBIAN_VERSION='12.1-slim'
+DEBIAN_CODENAME='bookworm'
 
 def pullRepos() {
 	dir ("${NAME}-app") {
