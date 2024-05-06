@@ -3,7 +3,7 @@ pipeline {
 	agent any
 	parameters {
 		string(name: 'BACULARIS_VERSION', defaultValue: 'master', description: 'Bacularis version to build.')
-		string(name: 'OS_VARIANTS', defaultValue: 'alpine,debian', description: 'Bacularis OS variants to build.')
+		string(name: 'OS_VARIANTS', defaultValue: 'debian', description: 'Bacularis OS variants to build.')
 	}
 	stages {
 		stage('Init') {
