@@ -10,8 +10,9 @@ ENV WEB_USER=www-data
 RUN apt update && \
     apt install -y curl gnupg2 && \
     curl https://www.bacula.org/downloads/Bacula-4096-Distribution-Verification-key.asc -o Bacula-4096-Distribution-Verification-key.asc && \
-    apt-key add Bacula-4096-Distribution-Verification-key.asc && \
-	apt update && \
+    apt-key add Bacula-4096-Distribution-Verification-key.asc
+COPY bacula-community.list /etc/apt/sources.list.d/bacula-community.list
+RUN	apt update && \
 	apt -y install bacula-common && \
 	if [ "${PACKAGE_NAME}" = 'standalone' ] || [ "${PACKAGE_NAME}" = 'api-dir' ]; then \
 		apt -y install postgresql; \
