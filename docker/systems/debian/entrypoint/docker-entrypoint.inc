@@ -18,9 +18,9 @@ function stop_postgresql()
 
 function init_bacula()
 {
-    su ${POSTGRESQL_USER} -c "db_name='${BACULA_DBNAME}' /usr/share/bacula-director/create_postgresql_database"
-    su ${POSTGRESQL_USER} -c "db_name='${BACULA_DBNAME}' /usr/share/bacula-director/make_postgresql_tables"
-    su ${POSTGRESQL_USER} -c "db_name='${BACULA_DBNAME}' db_user='${BACULA_DBUSER}'  db_password='${BACULA_DBPASSWORD}' /usr/share/bacula-director/grant_postgresql_privileges"
+    su ${POSTGRESQL_USER} -c "db_name='${BACULA_DBNAME}' /opt/bacula/scripts/create_postgresql_database"
+    su ${POSTGRESQL_USER} -c "db_name='${BACULA_DBNAME}' /opt/bacula/scripts/make_postgresql_tables"
+    su ${POSTGRESQL_USER} -c "db_name='${BACULA_DBNAME}' db_user='${BACULA_DBUSER}'  db_password='${BACULA_DBPASSWORD}' /opt/bacula/scripts/grant_postgresql_privileges"
 }
 
 function start_bacula_dir()
