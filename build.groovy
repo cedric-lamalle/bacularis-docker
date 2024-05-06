@@ -3,7 +3,8 @@
  */
 PROJECT_URL = 'https://github.com/bacularis'
 EXTERNAL_URL = "https://bacularis.app/downloads/bacularis-external-${params.BACULARIS_VERSION}.tar.gz"
-REGISTRY_URL = 'http://10.0.0.1:5000'
+REGISTRY_URL = 'https://basis-registry.basis.com.br'
+REGISTRY_SECRET = 'docker-registry'
 NAME = 'bacularis'
 PACKAGES = ['standalone', 'web', 'api-dir', 'api-sd', 'api-fd']
 ALPINE_VERSION='3.18.3'
@@ -123,7 +124,7 @@ def buildDockerImages(String package_version) {
 }
 
 def buildDockerImage(String package_name, String package_version, String os_variant) {
-	docker.withRegistry("${REGISTRY_URL}") {
+	docker.withRegistry("${REGISTRY_URL}", "${REGISTRY_SECRET}") {
 		def image_name = getImageName(package_name, package_version, os_variant)
 		def customImage = docker.build(image_name)
 		customImage.push()

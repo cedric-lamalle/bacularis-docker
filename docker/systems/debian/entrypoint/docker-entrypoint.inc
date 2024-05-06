@@ -30,32 +30,32 @@ function start_bacula_dir()
         init_bacula
     fi
 
-    /etc/init.d/bacula-director start
+    /opt/bacula/scripts/bacula-director start
 }
 
 function stop_bacula_dir()
 {
-    /etc/init.d/bacula-director stop
+    /opt/bacula/scripts/bacula-director stop
 }
 
 function start_bacula_sd()
 {
-    /etc/init.d/bacula-sd start
+    /opt/bacula/scripts/bacula-sd start
 }
 
 function stop_bacula_sd()
 {
-    /etc/init.d/bacula-sd stop
+    /opt/bacula/scripts/bacula-sd stop
 }
 
 function start_bacula_fd()
 {
-    /etc/init.d/bacula-fd start
+    /opt/bacula/scripts/bacula-fd start
 }
 
 function stop_bacula_fd()
 {
-    /etc/init.d/bacula-fd stop
+    /opt/bacula/scripts/bacula-fd stop
 }
 
 function start_php_fpm()
