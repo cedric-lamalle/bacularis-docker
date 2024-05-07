@@ -30,32 +30,32 @@ function start_bacula_dir()
         init_bacula
     fi
 
-    /opt/bacula/scripts/bacula-director start
+    /opt/bacula/scripts/bacula-ctl-dir start
 }
 
 function stop_bacula_dir()
 {
-    /opt/bacula/scripts/bacula-director stop
+    /opt/bacula/scripts/bacula-ctl-dir stop
 }
 
 function start_bacula_sd()
 {
-    /opt/bacula/scripts/bacula-sd start
+    /opt/bacula/scripts/bacula-ctl-sd start
 }
 
 function stop_bacula_sd()
 {
-    /opt/bacula/scripts/bacula-sd stop
+    /opt/bacula/scripts/bacula-ctl-sd stop
 }
 
 function start_bacula_fd()
 {
-    /opt/bacula/scripts/bacula-fd start
+    /opt/bacula/scripts/bacula-ctl-fd start
 }
 
 function stop_bacula_fd()
 {
-    /opt/bacula/scripts/bacula-fd stop
+    /opt/bacula/scripts/bacula-ctl-fd stop
 }
 
 function start_php_fpm()

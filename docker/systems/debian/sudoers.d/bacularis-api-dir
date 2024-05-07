@@ -2,6 +2,6 @@ Defaults:www-data !requiretty
 www-data ALL = (root) NOPASSWD: /opt/bacula/bin/bconsole
 www-data ALL = (root) NOPASSWD: /opt/bacula/bin/bdirjson
 www-data ALL = (root) NOPASSWD: /opt/bacula/bin/bbconsjson
-www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-director start
-www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-director stop
-www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-director restart
+www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-ctl-dir start
+www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-ctl-dir stop
+www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-ctl-dir restart

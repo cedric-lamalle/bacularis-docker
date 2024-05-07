@@ -1,5 +1,5 @@
 Defaults:www-data !requiretty
 www-data ALL = (root) NOPASSWD: /opt/bacula/bin/bfdjson
-www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-fd start
-www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-fd stop
-www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-fd restart
+www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-ctl-fd start
+www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-ctl-fd stop
+www-data ALL = (root) NOPASSWD: /opt/bacula/scripts/bacula-ctl-fd restart
