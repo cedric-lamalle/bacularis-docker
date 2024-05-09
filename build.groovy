@@ -102,7 +102,7 @@ def getImageName(String package_name, String package_version, String os_variant)
 	if (os_variant == 'debian') {
 		os_variant = "${DEBIAN_CODENAME}"
 	}
-	def image_name = 'bacularis/' package_name + ':' + package_version + '-' + os_variant
+	def image_name = 'bacularis/' + package_name + ':' + package_version + '-' + os_variant
 	return image_name
 }
 
