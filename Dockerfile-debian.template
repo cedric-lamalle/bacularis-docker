@@ -1,9 +1,9 @@
-FROM debian:12.1-slim
+FROM debian:%%DEBIAN_VERSION%%
 
 LABEL maintainer="Marcin Haba <marcin.haba@bacula.pl>"
 
-ENV BACULARIS_VERSION=master
-ENV PACKAGE_NAME=standalone
+ENV BACULARIS_VERSION=%%BACULARIS_VERSION%%
+ENV PACKAGE_NAME=%%PACKAGE_NAME%%
 ENV PHP_VERSION=8.2
 ENV WEB_USER=www-data
 # pull dbconfig-common
