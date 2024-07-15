@@ -46,7 +46,7 @@ RUN	apt update && \
 	chown root:bacula /opt/bacula/etc && \
 	chmod 775 /opt/bacula/etc && \
 	chmod 660 /opt/bacula/etc/*.conf || true && \
-	apt -y install nginx && \
+	apt -y install nginx sendemail && \
 	usermod -a -G bacula ${WEB_USER} && \
 	apt -y install sudo php-bcmath php-curl php-dom php-json php-ldap php-pgsql php-pgsql php-mysql php-intl php-fpm && \
 	apt -y -f install
